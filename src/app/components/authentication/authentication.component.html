@@ -1,8 +1,18 @@
-<head>
-  <base href="/auth">
-</head>
-<h5>Float Label</h5>
-<span class="p-float-label">
-    <input id="float-input" type="text" pInputText [(ngModel)]="value2">
-    <label for="float-input">Username</label>
-</span>
+<div class="myWindow">
+  <div class="myContainer">
+    <h1>Log In</h1>
+    <div>
+      <span class="p-float-label">
+          <input id="login-input" type="text" pInputText [(ngModel)]="value1">
+          <label for="login-input">Username</label>
+      </span>
+      <div style="padding-top: 30px">
+      <span class="p-float-label" >
+        <input id="password-input" type="text" pInputText [(ngModel)]="value2">
+        <label for="password-input">Password</label>
+      </span>
+      </div>
+    </div>
+    <p-button label="Submit"></p-button>
+  </div>
+</div>

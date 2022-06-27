@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AuthenticationComponent implements OnInit {
 
   value2: any;
+  value1: any;
 
   constructor() { }
 

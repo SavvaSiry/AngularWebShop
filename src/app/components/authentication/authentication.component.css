@@ -1,0 +1,15 @@
+.myContainer {
+  height: 300px;
+  width: 300px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.myWindow {
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}

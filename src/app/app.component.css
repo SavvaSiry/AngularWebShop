@@ -1,0 +1,60 @@
+ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем отступы*/
+  padding-left: 0; /*убираем отступы*/
+  background: #819A32; /*добавляем фон всему меню*/
+  height: 50px; /*задаем высоту*/
+}
+
+a {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  background: #819A32; /*добавляем фон к пункту меню*/
+  color: #fff; /*меняем цвет ссылок*/
+  padding: 0px 35px; /*добавляем отступ*/
+  font-family: arial; /*меняем шрифт*/
+  line-height: 50px; /*ровняем меню по вертикали*/
+  display: block;
+  border-right: 1px solid #677B27; /*добавляем бордюр справа*/
+  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+
+a:hover {
+  background: #D43737; /*добавляем эффект при наведении*/
+}
+
+li {
+  float: left; /*Размещаем список горизонтально для реализации меню*/
+  position: relative; /*задаем позицию для позиционирования*/
+}
+
+.topMenuContainer {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linkContainer {
+  display: flex;
+}
+
+.secondMenu {
+  height: 200px;
+  z-index: 30;
+  position: absolute;
+  left: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  background-color: #677B27;
+  display: none;
+  column-fill: auto;
+  column-width: 250px;
+}
+
+.linkContainer .menuLink:hover > .secondMenu {
+  display: block;
+}

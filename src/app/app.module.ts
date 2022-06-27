@@ -6,6 +6,7 @@ import {AuthenticationComponent} from './components/authentication/authenticatio
 import {InputTextModule} from 'primeng/inputtext';
 import {PaginatorModule} from "primeng/paginator";
 import {AppRoutingModule} from './app-routing.module';
+import {ButtonModule} from "primeng/button";
 
 
 @NgModule({
@@ -13,12 +14,13 @@ import {AppRoutingModule} from './app-routing.module';
     AppComponent,
     AuthenticationComponent
   ],
-  imports: [
-    BrowserModule,
-    InputTextModule,
-    PaginatorModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        InputTextModule,
+        PaginatorModule,
+        AppRoutingModule,
+        ButtonModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
