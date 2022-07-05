@@ -7,19 +7,23 @@ import {InputTextModule} from 'primeng/inputtext';
 import {PaginatorModule} from "primeng/paginator";
 import {AppRoutingModule} from './app-routing.module';
 import {ButtonModule} from "primeng/button";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    TestComponent
   ],
     imports: [
         BrowserModule,
         InputTextModule,
         PaginatorModule,
         AppRoutingModule,
-        ButtonModule
+        ButtonModule,
+        BrowserAnimationsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
