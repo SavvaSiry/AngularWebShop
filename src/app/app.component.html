@@ -1,10 +1,13 @@
 <div class="container">
   <div class="topMenuContainer">
-    <div class="logo">Лого</div>
+    <img class="logo" src="/assets/image/irlLogo.png">
     <div class="linkContainer">
       <div class="menuLink">
-        <a routerLink="test">Мужское</a>
-        <div class="secondMenu">
+        <a [@hoverTrigger]="hoverMenState" routerLink="test">Мужское</a>
+        <div
+          (mouseenter)="hoverMenState = 'active'"
+          (mouseleave)="hoverMenState = 'start'"
+          class="secondMenu">
           <div class="container">
             <div class="colum">
               <a href="">Предмет</a>
@@ -17,8 +20,11 @@
         </div>
       </div>
       <div class="menuLink">
-        <a href="">Женское</a>
-        <div class="secondMenu">
+        <a [@hoverTrigger]="hoverWomenState">Женское</a>
+        <div
+          (mouseenter)="hoverWomenState = 'active'"
+          (mouseleave)="hoverWomenState = 'start'"
+          class="secondMenu">
           <div class="container">
             <div class="colum">
               <a href="">Один</a>
@@ -34,5 +40,4 @@
     </div>
   </div>
 </div>
-
 <router-outlet></router-outlet>

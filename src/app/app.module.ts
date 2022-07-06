@@ -8,7 +8,7 @@ import {PaginatorModule} from "primeng/paginator";
 import {AppRoutingModule} from './app-routing.module';
 import {ButtonModule} from "primeng/button";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { TestComponent } from './test/test.component';
+import { TestComponent } from './components/test/test.component';
 
 
 @NgModule({
