@@ -9,6 +9,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {ButtonModule} from "primeng/button";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { TestComponent } from './components/test/test.component';
+import {RadioButtonModule} from "primeng/radiobutton";
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { TestComponent } from './components/test/test.component';
         PaginatorModule,
         AppRoutingModule,
         ButtonModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        RadioButtonModule
     ],
   providers: [],
   bootstrap: [AppComponent]
