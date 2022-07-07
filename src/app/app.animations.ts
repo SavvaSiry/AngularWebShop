@@ -27,14 +27,14 @@ export const divTrigger = trigger('divTrigger', [
 ]);
 
 export const arrowRotation = trigger('arrowRotation', [
-  state('default', style({
+  state('close', style({
     transform: 'rotate(0)'
   })),
-  state('rotated', style({
+  state('active', style({
     transform: 'rotate(180deg)'
   })),
-  transition('default => rotated', animate('400ms ease-out')),
-  transition('rotated => default', animate('400ms ease-in'))
+  transition('close => active', animate('400ms ease-out')),
+  transition('active => close', animate('400ms ease-in'))
 ]);
 
 export const radioButtons = trigger('radioButtons', [
@@ -46,6 +46,27 @@ export const radioButtons = trigger('radioButtons', [
   state('active', style({
     position: 'relative',
     lineHeight: '50px'
+  })),
+  transition('close => active', [
+    animate('0.3s')]),
+  // transition('close => active', [
+  //   style({
+  //     opacity: 1
+  //   }),
+  //   animate('1s')]),
+  transition('active => close', [
+    animate('0.3s')]),
+]);
+
+export const arrowListAnimation = trigger('arrowListAnimation', [
+  state('close', style({
+    height: 0,
+    marginTop: 0
+  })),
+  state('active', style({
+    height: '200px',
+    marginTop: '15px',
+    overflowY: 'auto'
   })),
   transition('close => active', [
     animate('0.3s')]),

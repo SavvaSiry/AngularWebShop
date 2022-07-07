@@ -6,13 +6,13 @@
         <!--        SORT        -->
         <div class="block-options">
           <div class="option-header">Сортировка</div>
-          <!--            OPTION           -->
+          <!--            SORT OPTION           -->
           <div class="option-container">
             <div class="option-block">
-              <div class="option-title">Пол</div>
+              <div class="option-title">По умолчанию</div>
               <div class="svg-midle-container">
-                <button [@arrowRotation]="sexState"
-                        (click)="rotateSex(); sexRadioButtonState = (sexRadioButtonState === 'close' ? 'active' : 'close')"
+                <button [@arrowRotation]="sortState"
+                        (click)="sortState = (sortState === 'close' ? 'active' : 'close')"
                         class="svg-button">
                   <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L9 9L17 1" stroke="#646464" stroke-width="2"/>
@@ -20,17 +20,18 @@
                 </button>
               </div>
             </div>
-            <div [@radioButtons]="sexRadioButtonState" class="test-radio-buttons">Предмет</div>
-            <div [@radioButtons]="sexRadioButtonState" class="test-radio-buttons">Предмет</div>
-            <div [@radioButtons]="sexRadioButtonState" class="test-radio-buttons">Предмет</div>
-            <div [@radioButtons]="sexRadioButtonState" class="test-radio-buttons">Предмет</div>
-            <div [@radioButtons]="sexRadioButtonState" class="test-radio-buttons">Предмет</div>
-            <div [@radioButtons]="sexRadioButtonState" class="test-radio-buttons">Предмет</div>
-            <div [@radioButtons]="sexRadioButtonState" class="test-radio-buttons">Предмет</div>
+            <div [@arrowListAnimation]="sortState" class="list-container">
+              <div class="test-radio-buttons">По возрастанию цены</div>
+              <div class="test-radio-buttons">По убыванию цены</div>
+              <div class="test-radio-buttons">Сначала старые товары</div>
+              <div class="test-radio-buttons">Сначала новые товары</div>
+              <div class="test-radio-buttons">По убыванию скидки</div>
+              <div class="test-radio-buttons">По возрастанию скидки</div>
+            </div>
             <div class="line"></div>
           </div>
         </div>
-        <!--        END SORT           -->
+        <!--        END SORT OPTION           -->
         <!--        START OPTIONS      -->
         <div class="block-options">
           <div class="option-header">Фильтры</div>
@@ -40,7 +41,7 @@
               <div class="option-title">Пол</div>
               <div class="svg-midle-container">
                 <button [@arrowRotation]="sexState"
-                        (click)="rotateSex(); sexRadioButtonState = (sexRadioButtonState === 'close' ? 'active' : 'close')"
+                        (click)="sexState = (sexState === 'close' ? 'active' : 'close')"
                         class="svg-button">
                   <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L9 9L17 1" stroke="#646464" stroke-width="2"/>
@@ -48,9 +49,19 @@
                 </button>
               </div>
             </div>
-            <div [@radioButtons]="sexRadioButtonState" class="test-radio-buttons">Предмет</div>
-            <div [@radioButtons]="sexRadioButtonState" class="test-radio-buttons">Предмет</div>
-            <div [@radioButtons]="sexRadioButtonState" class="test-radio-buttons">Предмет</div>
+            <div [@arrowListAnimation]="sexState" class="list-container">
+              <div class="test-radio-buttons">Мужской</div>
+              <div class="test-radio-buttons">Женский</div>
+              <div class="test-radio-buttons">Унисекс</div>
+              <div class="test-radio-buttons">Унисекс</div>
+              <div class="test-radio-buttons">Унисекс</div>
+              <div class="test-radio-buttons">Унисекс</div>
+              <div class="test-radio-buttons">Унисекс</div>
+              <div class="test-radio-buttons">Унисекс</div>
+              <div class="test-radio-buttons">Унисекс</div>
+              <div class="test-radio-buttons">Унисекс</div>
+              <div class="test-radio-buttons">Унисекс</div>
+            </div>
             <div class="line"></div>
           </div>
           <!--          END OPTION             -->
@@ -60,7 +71,7 @@
               <div class="option-title">Цвет</div>
               <div class="svg-midle-container">
                 <button [@arrowRotation]="colorState"
-                        (click)="rotateColor(); colorRadioButtonState = (colorRadioButtonState === 'close' ? 'active' : 'close')"
+                        (click)="colorState = (colorState === 'close' ? 'active' : 'close')"
                         class="svg-button">
                   <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L9 9L17 1" stroke="#646464" stroke-width="2"/>
@@ -68,104 +79,116 @@
                 </button>
               </div>
             </div>
-            <div [@radioButtons]="colorRadioButtonState" class="test-radio-buttons">Предмет</div>
-            <div [@radioButtons]="colorRadioButtonState" class="test-radio-buttons">Предмет</div>
-            <div [@radioButtons]="colorRadioButtonState" class="test-radio-buttons">Предмет</div>
-            <div [@radioButtons]="colorRadioButtonState" class="test-radio-buttons">Предмет</div>
+            <div [@arrowListAnimation]="colorState" class="list-container">
+              <div class="test-radio-buttons">Предмет</div>
+              <div class="test-radio-buttons">Предмет</div>
+              <div class="test-radio-buttons">Предмет</div>
+              <div class="test-radio-buttons">Предмет</div>
+              <div class="test-radio-buttons">Предмет</div>
+              <div class="test-radio-buttons">Предмет</div>
+              <div class="test-radio-buttons">Предмет</div>
+              <div class="test-radio-buttons">Предмет</div>
+              <div class="test-radio-buttons">Предмет</div>
+              <div class="test-radio-buttons">Предмет</div>
+              <div class="test-radio-buttons">Предмет</div>
+              <div class="test-radio-buttons">Предмет</div>
+            </div>
             <div class="line"></div>
           </div>
         </div>
         <!--        END OPTION        -->
       </div>
       <!--          CATALOG             -->
-      <div class="catalog">
-        <div class="product-card">
-          <div class="product">
-            <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
-            <div class="product-text">
-              <div class="product-title">Lacoste</div>
-              <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
-              <div class="price">15 780 ₽</div>
+      <div class="catalog-wrapper">
+        <div class="catalog">
+          <div class="product-card">
+            <div class="product">
+              <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
+              <div class="product-text">
+                <div class="product-title">Lacoste</div>
+                <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
+                <div class="price">15 780 ₽</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-card">
-          <div class="product">
-            <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
-            <div class="product-text">
-              <div class="product-title">Lacoste</div>
-              <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
-              <div class="price">15 780 ₽</div>
+          <div class="product-card">
+            <div class="product">
+              <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
+              <div class="product-text">
+                <div class="product-title">Lacoste</div>
+                <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
+                <div class="price">15 780 ₽</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-card">
-          <div class="product">
-            <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
-            <div class="product-text">
-              <div class="product-title">Lacoste</div>
-              <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
-              <div class="price">15 780 ₽</div>
+          <div class="product-card">
+            <div class="product">
+              <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
+              <div class="product-text">
+                <div class="product-title">Lacoste</div>
+                <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
+                <div class="price">15 780 ₽</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-card">
-          <div class="product">
-            <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
-            <div class="product-text">
-              <div class="product-title">Lacoste</div>
-              <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
-              <div class="price">15 780 ₽</div>
+          <div class="product-card">
+            <div class="product">
+              <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
+              <div class="product-text">
+                <div class="product-title">Lacoste</div>
+                <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
+                <div class="price">15 780 ₽</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-card">
-          <div class="product">
-            <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
-            <div class="product-text">
-              <div class="product-title">Lacoste</div>
-              <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
-              <div class="price">15 780 ₽</div>
+          <div class="product-card">
+            <div class="product">
+              <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
+              <div class="product-text">
+                <div class="product-title">Lacoste</div>
+                <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
+                <div class="price">15 780 ₽</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-card">
-          <div class="product">
-            <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
-            <div class="product-text">
-              <div class="product-title">Lacoste</div>
-              <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
-              <div class="price">15 780 ₽</div>
+          <div class="product-card">
+            <div class="product">
+              <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
+              <div class="product-text">
+                <div class="product-title">Lacoste</div>
+                <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
+                <div class="price">15 780 ₽</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-card">
-          <div class="product">
-            <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
-            <div class="product-text">
-              <div class="product-title">Lacoste</div>
-              <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
-              <div class="price">15 780 ₽</div>
+          <div class="product-card">
+            <div class="product">
+              <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
+              <div class="product-text">
+                <div class="product-title">Lacoste</div>
+                <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
+                <div class="price">15 780 ₽</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-card">
-          <div class="product">
-            <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
-            <div class="product-text">
-              <div class="product-title">Lacoste</div>
-              <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
-              <div class="price">15 780 ₽</div>
+          <div class="product-card">
+            <div class="product">
+              <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
+              <div class="product-text">
+                <div class="product-title">Lacoste</div>
+                <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
+                <div class="price">15 780 ₽</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-card">
-          <div class="product">
-            <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
-            <div class="product-text">
-              <div class="product-title">Lacoste</div>
-              <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
-              <div class="price">15 780 ₽</div>
+          <div class="product-card">
+            <div class="product">
+              <img class="imageContainer" src="assets/image/Product.png" alt="Some product">
+              <div class="product-text">
+                <div class="product-title">Lacoste</div>
+                <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
+                <div class="price">15 780 ₽</div>
+              </div>
             </div>
           </div>
         </div>

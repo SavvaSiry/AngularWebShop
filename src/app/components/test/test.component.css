@@ -10,24 +10,39 @@
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1024px) {
+  .options-catalog-container {
+    padding: 4rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .options-catalog-container {
+    padding: 5rem 3rem;
+  }
+}
+
 .options-catalog-container {
-  padding-top: 80px;
   display: flex;
-  justify-content: space-between;
 }
 
 .product-card {
+  width: 100%;
+  max-height: 100%;
+  max-width: 28rem;
   border-radius: 15px;
-  padding: 3.6rem 0.8rem 2.4rem;
+  padding: 2rem 1rem 1.5rem;
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  max-width: 28rem;
   justify-self: start;
-  width: 250px;
-  height: 425px;
   background-color: #ebebeb;
   box-shadow: 0px 15px 20px #d2d2d2;
+}
+
+.product-card:hover {
+  background-color: #d8d8d8;
+  border-radius: 15px;
 }
 
 .imageContainer {
@@ -59,24 +74,31 @@
   font-size: 14px;
 }
 
-.product-card:hover {
-  background-color: #d8d8d8;
-  border-radius: 15px;
+.catalog-wrapper {
+  flex: 0 1 86.4rem;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .catalog {
+    gap: 2rem;
+  }
 }
 
 .catalog {
-  grid-template-columns: repeat(auto-fit, minmax(210px, 16rem));
-  max-width: 70rem;
-  gap: 2.4rem;
-  margin-left: 12px;
+  grid-template-columns: repeat(auto-fit,minmax(194px, 30%));
   display: grid;
   justify-items: center;
   grid-auto-flow: row;
+  gap: 2.1rem;
+  /*margin-left: 12px;*/
 }
 
 /*LEFT OPTION MENU*/
 .left-option-menu {
   width: 20%;
+  min-width: 220px;
+  margin-right: 30px;
   height: auto;
   font-family: 'Arial', ui-serif;
 }
@@ -86,7 +108,7 @@
 }
 
 .option-container {
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -129,9 +151,17 @@
   height: 4px; /* Высота блока */
 }
 
+/* ANIMATION LIST*/
 .test-radio-buttons {
+  line-height: 40px;
   font-size: 12px;
   padding-left: 40px;
   color: #515158;
 }
 
+.list-container {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+}
