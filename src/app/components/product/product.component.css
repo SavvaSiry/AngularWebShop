@@ -1,0 +1,176 @@
+.product-images-price-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4rem 3rem;
+}
+@media (min-width: 990px) {
+  .product-images-price-list {
+    height: 700px;
+  }
+}
+@media (max-width: 990px) {
+  .product-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 990px) {
+  .product-image-container {
+    width: 64%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+.primary-image-container {
+  width: 63%;
+  display: flex;
+}
+@media (max-width: 990px) {
+  .primary-image-container {
+    width: 50%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+.main-image-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  width: 90%;
+}
+.left-images-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  width: 10%;
+}
+.main-image-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+}
+@media (max-width: 990px) {
+  .main-image-wrapper {
+    width: 100%;
+  }
+}
+.left-image-wrapper {
+  width: 100%;
+  max-height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+}
+.left-images-container {
+  display: flex;
+  width: 15%;
+  height: 85%;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 990px) {
+  .left-images-container {
+    width: 90%;
+    max-height: 90px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+}
+.left-image {
+  display: block;
+  height: 100%;
+}
+@media (max-width: 990px) {
+  .left-image {
+    height: auto;
+    width: 100%;
+  }
+}
+.image-container {
+  display: block;
+  width: 100%;
+}
+.price-list-container {
+  background-color: #ebebeb;
+  box-shadow: 15px 15px 40px #d2d2d2;
+  border-radius: 30px;
+  padding: 2rem 1rem;
+}
+@media (max-width: 990px) {
+  .price-list-container {
+    width: 45%;
+  }
+}
+@media (min-width: 990px) {
+  .price-list-container {
+    width: 36%;
+    height: 90%;
+  }
+}
+.price-list-title {
+  text-align: center;
+  color: #3f3f43;
+}
+@media (max-width: 990px) {
+  .price-list-title {
+    font-size: 14px;
+  }
+}
+.price-list-subtitle {
+  text-align: center;
+  margin-top: 20px;
+  color: #6B6B75;
+}
+@media (max-width: 990px) {
+  .price-list-subtitle {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+}
+.price-button {
+  text-align: center;
+  background-color: #d8d8d8;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #3f3f43;
+  padding: 8px 16px;
+}
+@media (max-width: 990px) {
+  .price-button {
+    font-size: 11px;
+  }
+}
+.size {
+  font-weight: bold;
+}
+.price {
+  margin-top: 5px;
+}
+.price-container {
+  margin-top: 30px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 30% 30% 30%;
+}
+@media (max-width: 990px) {
+  .price-container {
+    margin-top: 20px;
+  }
+}
+.active-buttons {
+  padding: 12px 6px;
+  margin-top: 15px;
+}
+/*# sourceMappingURL=product.component.css.map */
