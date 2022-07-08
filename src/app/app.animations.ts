@@ -37,44 +37,45 @@ export const arrowRotation = trigger('arrowRotation', [
   transition('active => close', animate('400ms ease-in'))
 ]);
 
-export const radioButtons = trigger('radioButtons', [
-  state('close', style({
-    opacity: 0,
-    position: 'relative',
-    lineHeight: '0px'
-  })),
-  state('active', style({
-    position: 'relative',
-    lineHeight: '50px'
-  })),
-  transition('close => active', [
-    animate('0.3s')]),
-  // transition('close => active', [
-  //   style({
-  //     opacity: 1
-  //   }),
-  //   animate('1s')]),
-  transition('active => close', [
-    animate('0.3s')]),
-]);
-
 export const arrowListAnimation = trigger('arrowListAnimation', [
   state('close', style({
     height: 0,
     marginTop: 0
   })),
   state('active', style({
-    height: '200px',
+    height: '210px',
     marginTop: '15px',
-    overflowY: 'auto'
+    overflowY: 'hidden'
   })),
   transition('close => active', [
     animate('0.3s')]),
-  // transition('close => active', [
-  //   style({
-  //     opacity: 1
-  //   }),
-  //   animate('1s')]),
   transition('active => close', [
     animate('0.3s')]),
+]);
+
+export const sexArrowListAnimation = trigger('sexArrowListAnimation', [
+  state('close', style({
+    height: 0,
+    marginTop: 0
+  })),
+  state('active', style({
+    height: '120px',
+    marginTop: '15px',
+    overflowY: 'hidden'
+  })),
+  transition('close => active', [
+    animate('0.3s')]),
+  transition('active => close', [
+    animate('0.3s')]),
+]);
+
+export const svgOptionButton = trigger('svgOptionButtonAnimation', [
+  state('default', style({
+    opacity: 0
+  })),
+  state('active', style({
+    opacity: 1
+  })),
+  transition('default <=> active', [
+    animate('0.1s')]),
 ]);

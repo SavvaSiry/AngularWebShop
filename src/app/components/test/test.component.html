@@ -21,19 +21,83 @@
               </div>
             </div>
             <div [@arrowListAnimation]="sortState" class="list-container">
-              <div class="test-radio-buttons">По возрастанию цены</div>
-              <div class="test-radio-buttons">По убыванию цены</div>
-              <div class="test-radio-buttons">Сначала старые товары</div>
-              <div class="test-radio-buttons">Сначала новые товары</div>
-              <div class="test-radio-buttons">По убыванию скидки</div>
-              <div class="test-radio-buttons">По возрастанию скидки</div>
+
+              <div class="scroll scroll--simple">
+                <!--              SCROLL  START           -->
+                <div class="option-button-container"
+                     (click)="testState = (testState === 'default' ? 'active' : 'default')">
+                  <button>
+                    <svg [@svgOptionButtonAnimation]="testState" width="13" height="10" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 4L5 8L12 1" stroke="#F0F0F0" stroke-width="2"/>
+                    </svg>
+                  </button>
+                  <div class="option-button-title">По возрастанию цены
+                  </div>
+                </div>
+                <div class="option-button-container"
+                     (click)="testState1 = (testState1 === 'default' ? 'active' : 'default')">
+                  <button>
+                    <svg [@svgOptionButtonAnimation]="testState1" width="13" height="10" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 4L5 8L12 1" stroke="#F0F0F0" stroke-width="2"/>
+                    </svg>
+                  </button>
+                  <div class="option-button-title">По убыванию цены
+                  </div>
+                </div>
+                <div class="option-button-container"
+                     (click)="testState2 = (testState2 === 'default' ? 'active' : 'default')">
+                  <button>
+                    <svg [@svgOptionButtonAnimation]="testState2" width="13" height="10" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 4L5 8L12 1" stroke="#F0F0F0" stroke-width="2"/>
+                    </svg>
+                  </button>
+                  <div class="option-button-title">Сначала старые товары
+                  </div>
+                </div>
+                <div class="option-button-container"
+                     (click)="testState3 = (testState3 === 'default' ? 'active' : 'default')">
+                  <button>
+                    <svg [@svgOptionButtonAnimation]="testState3" width="13" height="10" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 4L5 8L12 1" stroke="#F0F0F0" stroke-width="2"/>
+                    </svg>
+                  </button>
+                  <div class="option-button-title">Сначала новые товары
+                  </div>
+                </div>
+                <div class="option-button-container"
+                     (click)="testState4 = (testState4 === 'default' ? 'active' : 'default')">
+                  <button>
+                    <svg [@svgOptionButtonAnimation]="testState4" width="13" height="10" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 4L5 8L12 1" stroke="#F0F0F0" stroke-width="2"/>
+                    </svg>
+                  </button>
+                  <div class="option-button-title">По убыванию скидки
+                  </div>
+                </div>
+                <div class="option-button-container"
+                     (click)="testState5 = (testState5 === 'default' ? 'active' : 'default')">
+                  <button>
+                    <svg [@svgOptionButtonAnimation]="testState5" width="13" height="10" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 4L5 8L12 1" stroke="#F0F0F0" stroke-width="2"/>
+                    </svg>
+                  </button>
+                  <div class="option-button-title">По возрастанию скидки
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="line"></div>
           </div>
         </div>
         <!--        END SORT OPTION           -->
         <!--        START OPTIONS      -->
-        <div class="block-options">
+        <div class="block-options" style="margin-top: 40px">
           <div class="option-header">Фильтры</div>
           <!--          START OPTION           -->
           <div class="option-container">
@@ -49,18 +113,42 @@
                 </button>
               </div>
             </div>
-            <div [@arrowListAnimation]="sexState" class="list-container">
-              <div class="test-radio-buttons">Мужской</div>
-              <div class="test-radio-buttons">Женский</div>
-              <div class="test-radio-buttons">Унисекс</div>
-              <div class="test-radio-buttons">Унисекс</div>
-              <div class="test-radio-buttons">Унисекс</div>
-              <div class="test-radio-buttons">Унисекс</div>
-              <div class="test-radio-buttons">Унисекс</div>
-              <div class="test-radio-buttons">Унисекс</div>
-              <div class="test-radio-buttons">Унисекс</div>
-              <div class="test-radio-buttons">Унисекс</div>
-              <div class="test-radio-buttons">Унисекс</div>
+            <div [@sexArrowListAnimation]="sexState" class="list-container">
+              <div>
+                <div class="option-button-container"
+                     (click)="testState6 = (testState6 === 'default' ? 'active' : 'default')">
+                  <button>
+                    <svg [@svgOptionButtonAnimation]="testState6" width="13" height="10" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 4L5 8L12 1" stroke="#F0F0F0" stroke-width="2"/>
+                    </svg>
+                  </button>
+                  <div class="option-button-title">Мужской
+                  </div>
+                </div>
+                <div class="option-button-container"
+                     (click)="testState7 = (testState7 === 'default' ? 'active' : 'default')">
+                  <button>
+                    <svg [@svgOptionButtonAnimation]="testState7" width="13" height="10" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 4L5 8L12 1" stroke="#F0F0F0" stroke-width="2"/>
+                    </svg>
+                  </button>
+                  <div class="option-button-title">Женский
+                  </div>
+                </div>
+                <div class="option-button-container"
+                     (click)="testState8 = (testState8 === 'default' ? 'active' : 'default')">
+                  <button>
+                    <svg [@svgOptionButtonAnimation]="testState8" width="13" height="10" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 4L5 8L12 1" stroke="#F0F0F0" stroke-width="2"/>
+                    </svg>
+                  </button>
+                  <div class="option-button-title">Унисекс
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="line"></div>
           </div>
@@ -80,18 +168,20 @@
               </div>
             </div>
             <div [@arrowListAnimation]="colorState" class="list-container">
-              <div class="test-radio-buttons">Предмет</div>
-              <div class="test-radio-buttons">Предмет</div>
-              <div class="test-radio-buttons">Предмет</div>
-              <div class="test-radio-buttons">Предмет</div>
-              <div class="test-radio-buttons">Предмет</div>
-              <div class="test-radio-buttons">Предмет</div>
-              <div class="test-radio-buttons">Предмет</div>
-              <div class="test-radio-buttons">Предмет</div>
-              <div class="test-radio-buttons">Предмет</div>
-              <div class="test-radio-buttons">Предмет</div>
-              <div class="test-radio-buttons">Предмет</div>
-              <div class="test-radio-buttons">Предмет</div>
+              <div class="scroll scroll--simple">
+                <div class="test-radio-buttons">Предмет</div>
+                <div class="test-radio-buttons">Предмет</div>
+                <div class="test-radio-buttons">Предмет</div>
+                <div class="test-radio-buttons">Предмет</div>
+                <div class="test-radio-buttons">Предмет</div>
+                <div class="test-radio-buttons">Предмет</div>
+                <div class="test-radio-buttons">Предмет</div>
+                <div class="test-radio-buttons">Предмет</div>
+                <div class="test-radio-buttons">Предмет</div>
+                <div class="test-radio-buttons">Предмет</div>
+                <div class="test-radio-buttons">Предмет</div>
+                <div class="test-radio-buttons">Предмет</div>
+              </div>
             </div>
             <div class="line"></div>
           </div>
