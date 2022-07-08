@@ -10,13 +10,15 @@ import {ButtonModule} from "primeng/button";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { TestComponent } from './components/test/test.component';
 import {RadioButtonModule} from "primeng/radiobutton";
+import { ProductComponent } from './components/product/product.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthenticationComponent,
-    TestComponent
+    TestComponent,
+    ProductComponent
   ],
     imports: [
         BrowserModule,
