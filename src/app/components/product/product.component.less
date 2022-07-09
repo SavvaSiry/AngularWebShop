@@ -17,6 +17,9 @@
   @media (max-width: 990px) {
     padding: 2rem 1.5rem;
   }
+  @media (max-width: 760px) {
+    flex-direction: column;
+  }
 }
 
 .product-image-container {
@@ -45,6 +48,9 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-around;
+  }
+  @media (max-width: 760px){
+    width: 100%;
   }
 }
 
@@ -95,6 +101,9 @@
     align-items: center;
     align-content: center;
   }
+  @media (max-width: 760px) {
+    display: none;
+  }
 }
 
 .left-image {
@@ -122,6 +131,10 @@
   @media (min-width: 990px) {
     width: 36%;
     height: 90%;
+  }
+  @media (max-width: 760px) {
+    width: 100%;
+    margin-top: 30px;
   }
 }
 
@@ -172,6 +185,12 @@
   @media (max-width: 990px){
     margin-top: 20px;
   }
+  @media (max-width: 760px) {
+    grid-template-columns: auto auto auto auto;
+  }
+  @media (max-width: 425px) {
+    grid-template-columns: auto auto auto;
+  }
 }
 
 .active-buttons {
@@ -186,6 +205,12 @@
   padding-left: 3rem;
   padding-right: 3rem;
   padding-bottom: 5rem;
+  @media (max-width: 990px){
+    padding: 3rem 3rem;
+  }
+  @media (max-width: 760px){
+    padding: 2rem 1.5rem;
+  }
 }
 
 .product-name {
@@ -210,6 +235,9 @@
 
 .description-container {
   margin-top: 20px;
+  @media (max-width: 760px){
+    margin-top: 15px;
+  }
 }
 
 .information-text {
@@ -219,6 +247,10 @@
   color: @secondaryTextColor;
   @media (max-width: 990px){
     font-size: 12px;
+    width: 80%;
+  }
+  @media (max-width: 760px){
+    width: 100%;
   }
 }
 
@@ -230,6 +262,9 @@
   gap: 20px 40px;
   @media (max-width: 990px){
     width: 100%;
+  }
+  @media (max-width: 768px){
+    grid-template-columns: auto;
   }
 }
 

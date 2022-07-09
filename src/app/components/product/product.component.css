@@ -14,6 +14,11 @@
     padding: 2rem 1.5rem;
   }
 }
+@media (max-width: 760px) {
+  .product-images-price-list {
+    flex-direction: column;
+  }
+}
 @media (max-width: 990px) {
   .product-image-container {
     width: 100%;
@@ -43,6 +48,11 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-around;
+  }
+}
+@media (max-width: 760px) {
+  .primary-image-container {
+    width: 100%;
   }
 }
 .main-image-container {
@@ -93,6 +103,11 @@
     align-content: center;
   }
 }
+@media (max-width: 760px) {
+  .left-images-container {
+    display: none;
+  }
+}
 .left-image {
   display: block;
   height: 100%;
@@ -122,6 +137,12 @@
   .price-list-container {
     width: 36%;
     height: 90%;
+  }
+}
+@media (max-width: 760px) {
+  .price-list-container {
+    width: 100%;
+    margin-top: 30px;
   }
 }
 .price-list-title {
@@ -175,6 +196,16 @@
     margin-top: 20px;
   }
 }
+@media (max-width: 760px) {
+  .price-container {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+@media (max-width: 425px) {
+  .price-container {
+    grid-template-columns: auto auto auto;
+  }
+}
 .active-buttons {
   padding: 12px 6px;
   margin-top: 15px;
@@ -184,6 +215,16 @@
   padding-left: 3rem;
   padding-right: 3rem;
   padding-bottom: 5rem;
+}
+@media (max-width: 990px) {
+  .information-container {
+    padding: 3rem 3rem;
+  }
+}
+@media (max-width: 760px) {
+  .information-container {
+    padding: 2rem 1.5rem;
+  }
 }
 .product-name {
   font-size: 22px;
@@ -210,6 +251,11 @@
 .description-container {
   margin-top: 20px;
 }
+@media (max-width: 760px) {
+  .description-container {
+    margin-top: 15px;
+  }
+}
 .information-text {
   width: 70%;
   margin-top: 20px;
@@ -219,6 +265,12 @@
 @media (max-width: 990px) {
   .information-text {
     font-size: 12px;
+    width: 80%;
+  }
+}
+@media (max-width: 760px) {
+  .information-text {
+    width: 100%;
   }
 }
 .details-container {
@@ -231,6 +283,11 @@
 @media (max-width: 990px) {
   .details-container {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .details-container {
+    grid-template-columns: auto;
   }
 }
 .line {
