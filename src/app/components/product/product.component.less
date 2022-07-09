@@ -14,6 +14,9 @@
   @media (min-width: 990px) {
     height: 700px;
   }
+  @media (max-width: 990px) {
+    padding: 2rem 1.5rem;
+  }
 }
 
 .product-image-container {
@@ -125,6 +128,7 @@
 .price-list-title {
   text-align: center;
   color: @primaryTextColor;
+  font-weight: bold;
   @media (max-width: 990px){
     font-size: 14px;
   }
@@ -271,7 +275,7 @@
 .product-card {
   width: 100%;
   max-height: 100%;
-  max-width: 28rem;
+  max-width: 235px;
   border-radius: 15px;
   padding: 2rem 1rem 1.5rem;
   display: flex;
@@ -308,13 +312,13 @@
   margin-bottom: 5%;
 }
 
-.description {
+.product-description {
   color: @secondaryTextColor;
   font-size: 12px;
   margin-bottom: 5%;
 }
 
-.price {
+.product-price {
   font-size: 14px;
 }
 
