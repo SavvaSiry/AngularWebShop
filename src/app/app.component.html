@@ -1,43 +1,82 @@
-<div class="container">
-  <div class="topMenuContainer">
-    <img class="logo" src="/assets/image/irlLogo.png">
-    <div class="linkContainer">
-      <div class="menuLink">
-        <a [@hoverTrigger]="hoverMenState" routerLink="test">Мужское</a>
-        <div
-          (mouseenter)="hoverMenState = 'active'"
-          (mouseleave)="hoverMenState = 'start'"
-          class="secondMenu">
-          <div class="container">
-            <div class="colum">
-              <a href="">Предмет</a>
-              <a href="">Еще один</a>
-              <a href="">Вот второй</a>
-              <a href="">Вот второй</a>
-              <a href="">Вот второй</a>
+<div class="top-menu-wrapper">
+  <div class="container">
+    <div class="topMenuContainer">
+      <!--          HAMBURGER-->
+      <div class="hamburger-menu">
+
+        <div class="svg-button" (click)="leftMenuState = (leftMenuState === 'default' ? 'active' : 'default')">
+          <div class="svg-midle-container">
+            <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 1.89474H30" stroke="black" stroke-width="3"/>
+              <path d="M0 11.8947H30" stroke="black" stroke-width="3"/>
+              <path d="M0 21.8947H30" stroke="black" stroke-width="3"/>
+            </svg>
+          </div>
+        </div>
+
+        <div [@leftMenuAnimation]="leftMenuState" class="left-menu-box">
+          <div class="left-menu-container">
+            <!--            TITLE WITH BUTTON       -->
+            <div class="left-menu-header-container">
+              <div class="left-menu-header">
+                К А Т А Л О Г
+              </div>
+              <div class="svg-button left-menu-close-icon" (click)="leftMenuState = (leftMenuState === 'default' ? 'active' : 'default')">
+                <div class="svg-midle-container">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L21 21M1 21L21 1" stroke="black" stroke-width="2"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <!--          MAIN MENU-->
+      <img class="logo" src="/assets/image/irlLogo.png">
+      <div class="linkContainer">
+        <div class="menuLink">
+          <a [@hoverTrigger]="hoverMenState" routerLink="test">Мужское</a>
+          <div
+            (mouseenter)="hoverMenState = 'active'"
+            (mouseleave)="hoverMenState = 'start'"
+            class="secondMenu">
+            <div class="container">
+              <div class="colum">
+                <a href="">Предмет</a>
+                <a href="">Еще один</a>
+                <a href="">Вот второй</a>
+                <a href="">Вот второй</a>
+                <a href="">Вот второй</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menuLink">
+          <a [@hoverTrigger]="hoverWomenState">Женское</a>
+          <div
+            (mouseenter)="hoverWomenState = 'active'"
+            (mouseleave)="hoverWomenState = 'start'"
+            class="secondMenu">
+            <div class="container">
+              <div class="colum">
+                <a href="">Один</a>
+                <a href="">Два</a>
+                <a href="">Три</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="menuLink">
-        <a [@hoverTrigger]="hoverWomenState">Женское</a>
-        <div
-          (mouseenter)="hoverWomenState = 'active'"
-          (mouseleave)="hoverWomenState = 'start'"
-          class="secondMenu">
-          <div class="container">
-            <div class="colum">
-              <a href="">Один</a>
-              <a href="">Два</a>
-              <a href="">Три</a>
-            </div>
-          </div>
-        </div>
+      <div class="bar">
+        Корзина
       </div>
-    </div>
-    <div class="bar">
-      Корзина
     </div>
   </div>
 </div>
+<div class="fake-menu" style=""></div>
+
+
 <router-outlet></router-outlet>

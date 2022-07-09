@@ -79,3 +79,14 @@ export const svgOptionButton = trigger('svgOptionButtonAnimation', [
   transition('default <=> active', [
     animate('0.1s')]),
 ]);
+
+export const leftMenu = trigger('leftMenuAnimation', [
+  state('default', style({
+    left: '-130%'
+  })),
+  state('active', style({
+    left: 0
+  })),
+  transition('default <=> active', [
+    animate('0.4s')]),
+]);
