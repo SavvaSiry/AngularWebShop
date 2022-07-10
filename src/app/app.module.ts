@@ -8,9 +8,10 @@ import {PaginatorModule} from "primeng/paginator";
 import {AppRoutingModule} from './app-routing.module';
 import {ButtonModule} from "primeng/button";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { TestComponent } from './components/test/test.component';
+import {TestComponent} from './components/test/test.component';
 import {RadioButtonModule} from "primeng/radiobutton";
-import { ProductComponent } from './components/product/product.component';
+import {ProductComponent} from './components/product/product.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -20,15 +21,16 @@ import { ProductComponent } from './components/product/product.component';
     TestComponent,
     ProductComponent
   ],
-    imports: [
-        BrowserModule,
-        InputTextModule,
-        PaginatorModule,
-        AppRoutingModule,
-        ButtonModule,
-        BrowserAnimationsModule,
-        RadioButtonModule
-    ],
+  imports: [
+    BrowserModule,
+    InputTextModule,
+    PaginatorModule,
+    AppRoutingModule,
+    ButtonModule,
+    BrowserAnimationsModule,
+    RadioButtonModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

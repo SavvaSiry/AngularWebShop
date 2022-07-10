@@ -188,15 +188,15 @@
       </div>
       <!--          CATALOG             -->
       <div class="catalog-wrapper">
-        <div class="catalog">
+        <div class="catalog" *ngFor="let product of products">
           <div class="product-card" routerLink="/product">
             <a style="height: 100%; display: flex; width: 100%;" routerLink="product"></a>
             <div class="product" routerLink="product">
-              <img class="imageContainer" src="assets/image/dunk.png" alt="Some product">
+              <img class="imageContainer" src="assets/image/{{product.images[0].url}}" alt="Some product">
               <div class="product-text">
-                <div class="product-title">Lacoste</div>
-                <div class="description">Мужская толстовка с удлиненными рукавами Sport Light</div>
-                <div class="price">15 780 ₽</div>
+                <div class="product-title">{{product.name}}</div>
+                <div class="description">{{product.brand}}</div>
+                <div class="price">{{product.sizes[0].cost}} ₽</div>
               </div>
             </div>
           </div>

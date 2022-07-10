@@ -5,6 +5,8 @@ import {
   sexArrowListAnimation,
   svgOptionButton
 } from "../../app.animations";
+import {HttpClient} from "@angular/common/http";
+import {Product} from "../moduls/product";
 
 @Component({
   selector: 'app-test',
@@ -28,11 +30,21 @@ export class TestComponent implements OnInit {
   testState7 = 'default';
   testState8 = 'default';
 
-  constructor() {
+  products?: [Product];
+
+  constructor(private http: HttpClient) {
   }
 
   ngOnInit(): void {
+    this.http.get('http://localhost:8081/products')
+      .subscribe({
+        next: (data: any) => {
+          this.products = data;
+          console.log(data);
+        }
+      })
   }
+
 
   templateForm(value: any) {
 

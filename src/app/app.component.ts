@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {divTrigger, hoverTrigger, leftMenu} from "./app.animations";
+import {hoverTrigger, leftMenu} from "./app.animations";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,11 @@ import {divTrigger, hoverTrigger, leftMenu} from "./app.animations";
 })
 
 export class AppComponent {
+
+  userName: string = "";
+
+  constructor(private http: HttpClient) {
+  }
 
   title = 'Home';
   hoverMenState = 'start';
